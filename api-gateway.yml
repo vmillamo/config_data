@@ -1,19 +1,26 @@
 server:
-	port: 8088
+  port: 8088
 
 eureka:
-	client:
-	server-url:
-	defaultZone: http://localhost:8761/eureka
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
 
 spring:
-	cloud:
-	gateway:
-	discovery:
-	locator:
-	enabled: true
-routes:
-	- id: micro01
-	uri: http://localhost:8085/
-	predicates:
-	- Path=/afiliado/**
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: micro01
+          uri: http://localhost:8085/
+          predicates:
+            - Path=/fixed/**
+	    - Path=/account_saving_client/**
+	    - Path=/account_saving/**
+	    - Path=/client/**
+	    - Path=/employee/**
+	    - Path=/holder/**
+	    - Path=/person/**
+	    - Path=/persona/**
