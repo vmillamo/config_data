@@ -17,10 +17,10 @@ spring:
           uri: http://localhost:8085/
           predicates:
             - Path=/fixed/**
-	    - Path=/account_saving_client/**
-	    - Path=/account_saving/**
-	    - Path=/client/**
-	    - Path=/employee/**
-	    - Path=/holder/**
-	    - Path=/person/**
-	    - Path=/persona/**
+            - Path=/account_saving_client/**
+            - Path=/account_saving/**
+            - Path=/client/**
+            - Path=/employee/**
+            - Path=/holder/**
+            - Path=/person/**
+            - Path=/persona/**
